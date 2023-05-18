@@ -1,0 +1,32 @@
+# Inventory Attributes - Species
+
+-   American Beech
+-   Aspen
+-   Ash
+-   Basswood
+-   Birch
+-   Black Locust
+-   Black Walnut
+-   Blackgum
+-   Cherry
+-   Cottonwood
+-   Cypress
+-   Elm
+-   Hard Maple #1&2 White
+-   Hard Maple Unselected
+-   Hickory
+-   Honey Locust
+-   Northern Soft Grey Elm
+-   Poplar
+-   Quarter Sawn Red Oak
+-   Quarter Sawn White Oak
+-   Red Oak
+-   Rift Sawn Red Oak
+-   Rift Sawn White Oak
+-   Sassafras
+-   Soft Maple #1&2 White
+-   Soft Maple Unselected
+-   Sweetgum
+-   Sycamore
+-   White Oak
+-   Willow
