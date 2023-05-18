@@ -8,6 +8,12 @@ This endpoint is used for the initial inventory import process.
 
 ---
 
+## Request
+
+`POST:` `https://inbound.lumbermarketplace.com/inventory/{business-uuid}`
+
+---
+
 ## Bundle Schema:
 
 | Key         | Type   | Required | Notes                                                                                     |
@@ -43,10 +49,6 @@ This endpoint is used for the initial inventory import process.
 | width          | string | false    |                                                         |
 | surfacemeasure | string | false    |                                                         |
 | pieces         | string | false    |                                                         |
-
-## Request
-
-`POST:` `https://inbound.lumbermarketplace.com/inventory/{business-uuid}`
 
 ## Example Data:
 

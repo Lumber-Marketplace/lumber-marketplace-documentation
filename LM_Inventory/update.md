@@ -12,6 +12,8 @@ _Note: The full bundle object is required for each bundle that needs to be updat
 
 `PUT:` `https://inbound.lumbermarketplace.com/inventory/{business-uuid}`
 
+---
+
 ## Example Data:
 
 ```json

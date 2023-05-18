@@ -10,6 +10,8 @@ This endpoint is used to remove bundels from a businesses inventory (due to in-p
 
 `DELETE:` `https://inbound.lumbermarketplace.com/inventory/{business-uuid}`
 
+---
+
 ## Example Data:
 
 ```json
