@@ -185,7 +185,24 @@ This endpoint is used for the initial inventory import process. Individual bundl
 ```json
 [
     {
-        example response data
+        Good
+
+        Error: uuid invalid
+
+        Error: attribute miss-match (multiple)
+         - Fix attribute X
+
+        Error: attribute missing (multiple)
+         - required attribute x is missing from the data
+
+        Error: part of an load
+         - matching bundleid and yardid is currently part of a load and cannot be updated
+
+         Error: part of an order
+         - matching bundleid and yardid is currently part of an order and cannot be updated
+
+        Error: yardid miss-match (multiple)
+         - User needs to log into LM and add [yardid] to shipping address
     }
 ]
 ```

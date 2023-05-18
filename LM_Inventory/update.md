@@ -2,9 +2,9 @@
 
 ## Summary
 
-This endpoint is used to update bundels in a businesses inventory. Any objects included will be updated on the bundle. This will only overwrite objects that are included. Any missing objects will not be updated.
+This endpoint is used to update bundels in a businesses inventory.
 
-_Note: any objects with an empty string will be replaced with the empty string value._
+_Note: The full bundle object will be_
 
 ---
 
@@ -152,6 +152,9 @@ _Note: any objects with an empty string will be replaced with the empty string v
         Good
 
         Error: uuid invalid
+
+        Error: Could not locate Bundle:[bundleid] on Yard: [yardid] (multiple)
+         - If this is new inventory needs to be sent to the inventory endpoint
 
         Error: attribute miss-match (multiple)
          - Fix attribute X
