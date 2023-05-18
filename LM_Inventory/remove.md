@@ -8,7 +8,7 @@ This endpoint is used to remove bundels from a businesses inventory (due to in-p
 
 ## Request
 
-`POST:` `https://inbound.lumbermarketplace.com/staging/inventory/remove/{business-uuid}`
+`DELETE:` `https://inbound.lumbermarketplace.com/inventory/{business-uuid}`
 
 ## Example Data:
 

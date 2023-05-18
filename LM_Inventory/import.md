@@ -2,7 +2,7 @@
 
 ## Summary
 
-This endpoint is used for the initial inventory import process. Individual bundles can be updated, added and removed using this endpoint, However, when pushing updates, complete bundle data is required for the bundles that need to be updated.
+This endpoint is used for the initial inventory import process.
 
 **For any missing values, include the key and the value needs to be an empty string (example: `""`)**
 
@@ -46,7 +46,7 @@ This endpoint is used for the initial inventory import process. Individual bundl
 
 ## Request
 
-`POST:` `https://inbound.lumbermarketplace.com/staging/inventory/{business-uuid}`
+`POST:` `https://inbound.lumbermarketplace.com/inventory/{business-uuid}`
 
 ## Example Data:
 

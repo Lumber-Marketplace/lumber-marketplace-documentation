@@ -4,13 +4,13 @@
 
 This endpoint is used to update bundels in a businesses inventory.
 
-_Note: The full bundle object will be_
+_Note: The full bundle object is required for each bundle that needs to be updated in the inventory_
 
 ---
 
 ## Request
 
-`POST:` `https://inbound.lumbermarketplace.com/staging/inventory/update/{business-uuid}`
+`PUT:` `https://inbound.lumbermarketplace.com/inventory/{business-uuid}`
 
 ## Example Data:
 
