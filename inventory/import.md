@@ -4,35 +4,35 @@
 
 This endpoint is used for the initial inventory import process. Individual bundles can be updated, added and removed using this endpoint, However, when pushing updates, complete bundle data is required for the bundles that need to be updated.
 
-For any false values set these to an empty string (example: `""`)
+**For any missing values, include the key and the value needs to be an empty string (example: `""`)**
 
 ---
 
 ## Bundle Schema:
 
-| Key         | Type   | Required | Notes                                                                       |
-| ----------- | ------ | -------- | --------------------------------------------------------------------------- |
-| bundletype  | string | false    | Used in FS but not currently in LM. LM may use this in the future           |
-| yardid      | string | true     | If multiple, these must be set to shipping addresses in LM                  |
-| bundleid    | string | true     | Bundle ID in FS.                                                            |
-| status      | string | true     | `active \ inactive \ removed`                                               |
-| speciesid   | string | true     | Must match LM [Species Attributes](attributes/species.md)                   |
-| thknum      | string | true     | Must match LM [Thickness Attributes](attributes/thickness.md) (numerator)   |
-| thkden      | string | true     | Must match LM [Thickness Attributes](attributes/thickness.md) (denominator) |
-| gradeid     | string | true     | Must match LM [Grade Attributes](attributes/grade.md)                       |
-| moistureid  | string | true     | Must match LM [Moisture Attributes](attributes/moisture.md)                 |
-| finishid    | string | true     | Must match LM [Finish Attributes](attributes/finish.md)                     |
-| region      | string | true     | Must match LM [Region Attributes](attributes/region.md)                     |
-| length1     | string | true     | Must match LM [Length Attributes](attributes/length.md)                     |
-| length2     | string | false    | Must match LM [Length Attributes](attributes/length.md)                     |
-| length3     | string | false    | Must match LM [Length Attributes](attributes/length.md)                     |
-| length4     | string | false    | Must match LM [Length Attributes](attributes/length.md)                     |
-| length5     | string | false    | Must match LM [Length Attributes](attributes/length.md)                     |
-| pieces      | string | false    |                                                                             |
-| boardfeet   | string | true     |                                                                             |
-| datecreated | string | false    |                                                                             |
-| weight      | string | false    |                                                                             |
-| detail      | array  | true     |                                                                             |
+| Key         | Type   | Required | Notes                                                                                     |
+| ----------- | ------ | -------- | ----------------------------------------------------------------------------------------- |
+| bundletype  | string | false    | Used in FS but not currently in LM. LM may use this in the future                         |
+| yardid      | string | true     | If multiple, these must be set to shipping addresses in LM                                |
+| bundleid    | string | true     | Bundle ID in FS.                                                                          |
+| status      | string | true     | `active \ inactive \ removed`                                                             |
+| speciesid   | string | true     | Must match LM [Species Attributes](attributes/species.md)                                 |
+| thknum      | string | true     | Must match LM [Thickness Attributes](attributes/thickness.md) (numerator)                 |
+| thkden      | string | true     | Must match LM [Thickness Attributes](attributes/thickness.md) (denominator)               |
+| gradeid     | string | true     | Must match LM [Grade Attributes](attributes/grade.md)                                     |
+| moistureid  | string | true     | Must match LM [Moisture Attributes](attributes/moisture.md)                               |
+| finishid    | string | true     | Must match LM [Finish Attributes](attributes/finish.md)                                   |
+| region      | string | true     | Must match LM [Region Attributes](attributes/region.md)                                   |
+| length1     | string | true     | Must match LM [Length Attributes](attributes/length.md)                                   |
+| length2     | string | false    | Must match LM [Length Attributes](attributes/length.md)                                   |
+| length3     | string | false    | Must match LM [Length Attributes](attributes/length.md)                                   |
+| length4     | string | false    | Must match LM [Length Attributes](attributes/length.md)                                   |
+| length5     | string | false    | Must match LM [Length Attributes](attributes/length.md)                                   |
+| pieces      | string | false    |                                                                                           |
+| boardfeet   | string | true     |                                                                                           |
+| datecreated | string | false    |                                                                                           |
+| weight      | string | false    | Used for quoting shipping and load estimation. If not populated, LM calculates this value |
+| detail      | array  | true     |                                                                                           |
 
 ## Bundle Detail Schema:
 
@@ -46,9 +46,7 @@ For any false values set these to an empty string (example: `""`)
 
 ## Request
 
-`POST:` `https://inbound.lumbermarketplace.com/staging/inventory/{account-uuid}`
-
-## Response
+`POST:` `https://inbound.lumbermarketplace.com/staging/inventory/{business-uuid}`
 
 ## Example Data:
 
@@ -182,12 +180,12 @@ For any false values set these to an empty string (example: `""`)
 ]
 ```
 
-## Bundle Detail Schema:
+## Response
 
-| Key            | Value  | Required | Notes |
-| -------------- | ------ | -------- | ----- |
-| gradeid        | string | false    |       |
-| length         | string | false    |       |
-| width          | string | false    |       |
-| surfacemeasure | string | false    |       |
-| pieces         | string | false    |       |
+```json
+[
+    {
+        example response data
+    }
+]
+```
