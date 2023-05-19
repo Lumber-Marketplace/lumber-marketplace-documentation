@@ -146,32 +146,205 @@ _Note: The full bundle object is required for each bundle that needs to be updat
 ]
 ```
 
-## Response
+## Success Response
+
+**Good**
 
 ```json
-[
-    {
-        Good
+{
+    "message": "Update request successful",
+    "response": {
+        "locations": {
+            ...
+        },
+        "attributes": {
+            ...
+        },
+        "inventory": {
+            ...
+        }
+    },
 
-        Error: uuid invalid
-
-        Error: Could not locate Bundle:[bundleid] on Yard: [yardid] (multiple)
-         - If this is new inventory needs to be sent to the inventory endpoint
-
-        Error: attribute miss-match (multiple)
-         - Fix attribute X
-
-        Error: attribute missing (multiple)
-         - required attribute x is missing from the data
-
-        Error: part of an load
-         - matching bundleid and yardid is currently part of a load and cannot be updated
-
-         Error: part of an order
-         - matching bundleid and yardid is currently part of an order and cannot be updated
-
-        Error: yardid miss-match (multiple)
-         - User needs to log into LM and add [yardid] to shipping address
-    }
-]
+}
 ```
+
+## Error Responses
+
+**Error: uuid invalid**
+
+```json
+{
+  "message": "Error sending message to API",
+  "error": {
+    "statusCode": 400,
+    "message": "Validation failed (uuid is expected)",
+    "error": "Bad Request"
+  }
+}
+```
+
+**Error: Could not locate Bundle:[bundleid] on Yard: [yardid] (multiple)** - Currently it will add a new inventory if it is not found
+*TODO*
+- If this is new inventory needs to be sent to the inventory endpoint
+
+**Error: attribute miss-match (multiple)** - Fix attribute X
+
+```json
+{
+    "message": "Error sending message to API",
+    "error": {
+        "statusCode": 400,
+        "message": "Some inventory items have errors",
+        "error": "Bad Request",
+        "data": [
+            {
+                "type": "inventory",
+                "message": "These inventory items have errors.",
+                "count": 1,
+                "data": [
+                    {
+                        "type": "attribute",
+                        "count": 1,
+                        "data": [
+                            {
+                                "name": "032524",
+                                "status": "AVAILABLE",
+                                "weight": 0,
+                                "businessId": 1,
+                                "locationId": 2,
+                                "attributes": [
+                                            ...
+                                ],
+                                "details": {
+                                            ...
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "attribute",
+                "message": "These attributes are not connected to a site attribute.",
+                "count": 1,
+                "data": [
+                    {
+                        "apiName": "Ashs",
+                        "type": "SPECIES",
+                        "attributeId": 0
+                    }
+                ]
+            }
+        ]
+    }
+}
+```
+
+**Error: attribute missing (multiple)** - required attribute x is missing from the data
+
+```json
+         {
+            "message": "Error sending message to API",
+            "error": {
+                "statusCode": 400,
+                "message": "Some inventory items have errors",
+                "error": "Bad Request",
+                "data": [
+                    {
+                        "type": "inventory",
+                        "message": "These inventory items have errors.",
+                        "count": 1,
+                        "data": [
+                            {
+                                "type": "attribute",
+                                "count": 1,
+                                "data": [
+                                    {
+                                        "name": "032524",
+                                        "status": "AVAILABLE",
+                                        "weight": 0,
+                                        "businessId": 1,
+                                        "locationId": 2,
+                                        "attributes": [
+                                                    ...
+                                        ],
+                                        "details": {
+                                                    ...
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "attribute",
+                        "message": "These attributes are not connected to a site attribute.",
+                        "count": 1,
+                        "data": [
+                            {
+                                "type": "SPECIES",
+                                "attributeId": 0
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+```
+
+**Error: yardid miss-match (multiple)** - User needs to log into LM and add [yardid] to shipping address
+
+```json
+    {
+        "message": "Error sending message to API",
+    "error": {
+        "statusCode": 400,
+        "message": "Some inventory items have errors",
+        "error": "Bad Request",
+        "data": [
+            {
+                "type": "inventory",
+                "message": "These inventory items have errors.",
+                "count": 1,
+                "data": [
+                    {
+                        "type": "attribute",
+                        "count": 1,
+                        "data": [
+                            {
+                                "name": "032524",
+                                "status": "AVAILABLE",
+                                "weight": 0,
+                                "businessId": 1,
+                                "locationId": 2,
+                                "attributes": [
+                                    ...
+                                ],
+                                "details": {
+                                    ...
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "yard",
+                "message": "These yards are not connected to a location.",
+                "count": 1,
+                "data": [
+                    "2"
+                ]
+            }
+        ]
+    }
+}
+```
+
+**Error: part of an load**
+*TODO*
+- matching bundleid and yardid is currently part of a load and cannot be updated
+
+**Error: part of an order**
+*TODO*
+- matching bundleid and yardid is currently part of an order and cannot be updated
