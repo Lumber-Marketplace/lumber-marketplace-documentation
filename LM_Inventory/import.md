@@ -21,7 +21,7 @@ This endpoint is used for the initial inventory import process.
 | bundletype  | string | false    | Used in FS but not currently in LM. LM may use this in the future                         |
 | yardid      | string | true     | If multiple, these must be set to shipping addresses in LM                                |
 | bundleid    | string | true     | Bundle ID in FS.                                                                          |
-| status      | string | true     | `active \ inactive \ removed`                                                             |
+| status      | string | true     | `AVAILABLE / UNAVAILABLE / INCOMPLETE / REMOVED / RESERVED / DISPUTED / SOLD`             |
 | speciesid   | string | true     | Must match LM [Species Attributes](attributes/species.md)                                 |
 | thknum      | string | true     | Must match LM [Thickness Attributes](attributes/thickness.md) (numerator)                 |
 | thkden      | string | true     | Must match LM [Thickness Attributes](attributes/thickness.md) (denominator)               |
