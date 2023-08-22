@@ -12,21 +12,15 @@
 -   Cottonwood
 -   Cypress
 -   Elm
--   Hard Maple #1&2 White
--   Hard Maple Unselected
 -   Hickory
 -   Honey Locust
+-   Soft Maple
+-   Hard Maple
 -   Northern Soft Grey Elm
--   Poplar
--   Quarter Sawn Red Oak
--   Quarter Sawn White Oak
 -   Red Oak
--   Rift Sawn Red Oak
--   Rift Sawn White Oak
+-   White Oak
+-   Poplar
 -   Sassafras
--   Soft Maple #1&2 White
--   Soft Maple Unselected
 -   Sweetgum
 -   Sycamore
--   White Oak
 -   Willow

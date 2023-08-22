@@ -1,0 +1,27 @@
+[
+    {
+        "bundletype": "export",
+        "yardid": "1",
+        "bundleid": "00001",
+        "speciesid": "Ash",
+        "thknum": "4",
+        "thkden": "4",
+        "gradeid": "#1C",
+        "moistureid": "Kiln Dried",
+        "finishid": "Rough",
+        "region": "Appalachian",
+        "averagelength": "10",
+        "averagewidth": "4.5",
+        "length1": "10",
+        "length2": "0",
+        "length3": "0",
+        "length4": "0",
+        "length5": "0",
+        "pieces": "120",
+        "boardfeet": "923",
+        "datecreated": "7/26/2023",
+        "layers": "",
+        "weight": "",
+        "detail": []
+    }
+]
