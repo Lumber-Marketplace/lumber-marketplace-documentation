@@ -1,8 +1,8 @@
 # Inventory Attributes - Species
 
 -   American Beech
--   Aspen
 -   Ash
+-   Aspen
 -   Basswood
 -   Birch
 -   Black Locust
@@ -12,15 +12,15 @@
 -   Cottonwood
 -   Cypress
 -   Elm
+-   Hard Maple
 -   Hickory
 -   Honey Locust
--   Soft Maple
--   Hard Maple
 -   Northern Soft Grey Elm
--   Red Oak
--   White Oak
 -   Poplar
+-   Red Oak
 -   Sassafras
+-   Soft Maple
 -   Sweetgum
 -   Sycamore
+-   White Oak
 -   Willow
