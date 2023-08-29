@@ -6,7 +6,6 @@
 -   Prime
 -   Superior
 -   Select
--   #1C & Select
 -   Select & Better
 -   Select & F1F
 -   #1C
