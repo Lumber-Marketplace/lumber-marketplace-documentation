@@ -10,7 +10,7 @@ _Note: The full bundle object is required for each bundle that needs to be updat
 
 ## Request
 
-`PUT:` `https://inbound.lumbermarketplace.com/inventory/{business-uuid}`
+`PUT:` `https://inbound.lumbermarketplace.com/inventory/{YardMaster-API-Key}`
 
 ---
 
