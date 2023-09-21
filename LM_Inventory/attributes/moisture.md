@@ -1,4 +1,4 @@
 # Inventory Attributes - Thickness
 
--   Air Dried
--   Kiln Dried
+-   K/D
+-   A/D
