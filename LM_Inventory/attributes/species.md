@@ -16,7 +16,7 @@
 -   Honey Locust
 -   Soft Maple
 -   Hard Maple
--   Northern Soft Grey Elm   "N. Soft Grey Elm"
+-   Northern Soft Grey Elm 
 -   Red Oak
 -   White Oak
 -   Poplar
